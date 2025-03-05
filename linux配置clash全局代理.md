@@ -1,4 +1,5 @@
-### 配置clash全局代理之后 docker和k8s可以直接拉取镜像 非常方便（k8s需要每个节点都配置）   需要自己有订阅的clash
+### 需要自己有订阅的clash
+### 配置clash全局代理之后 docker和k8s可以直接拉取镜像 非常方便（k8s需要每个节点都配置）  
 参考文章  
 https://www.fuxi.info/archives/273  
 https://robinxb.com/posts/2023/clash-on-linux/  
