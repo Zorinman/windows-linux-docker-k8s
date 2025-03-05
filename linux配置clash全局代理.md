@@ -66,7 +66,7 @@ RestartPreventExitStatus=23
 WantedBy=multi-user.target
 ```
 重新加载守护进程  
-`systemctl enable clash`  
+`systemctl daemon-reload`   
 启动clash  
 `systemctl start clash `  
 检查运行状态  
