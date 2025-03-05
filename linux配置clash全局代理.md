@@ -50,7 +50,7 @@ $ source /etc/profile
 在/etc/systemd/system/目录新建一个clash.service文件  
 ```
 $ vim /etc/systemd/system/clash.service
-#添加以下内容：
+#添加以下内容（记得把#之后的注释全部删除）：
 [Unit]
 Description=Clash service
 After=network.target
