@@ -76,8 +76,13 @@ WantedBy=multi-user.target
 `systemctl start clash `  
 检查运行状态  
 `systemctl status clash`
-查看运行日志
+设置开机自启clash服务  
+`systemctl enable clash `  
+
+查看运行日志  
 `journalctl -u clash -f`
+
+注意通过status查看内存大小，防止内存泄露，记得定时重启clash服务使内存清零
 ### systemctl常用命令
 ```
 systemctl status clash 查看clash服务
