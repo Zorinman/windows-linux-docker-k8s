@@ -23,6 +23,10 @@ config.yaml为clash的代理规则和clash的一些其他设置。代理规则�
 ![image](https://github.com/user-attachments/assets/9d60a4a9-f0a7-4af9-b279-1f70a5203d19)
 
 将下载下来的yaml文件改名为config.yaml放入linux中 
+在config.yaml的目录下运行该文件   
+`clash -f config.yaml`  
+此时会提示[MMDB] can't find DB, start download path=/root/.config/clash/Country.mmdb  
+如果网络好可以直接下载下来并成功运行，如何下载不下来就直接Ctrl+c取消运行，先按照第3步去安装MMDB  
 
 ### 3.下载MMDB
 Country.mmdb为全球IP库，可以实现各个国家的IP信息解析和地理定位，没有这个文件clash是无法运行的  
