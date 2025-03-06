@@ -32,7 +32,8 @@ config.yaml为clash的代理规则和clash的一些其他设置。代理规则�
 Country.mmdb为全球IP库，可以实现各个国家的IP信息解析和地理定位，没有这个文件clash是无法运行的  
 https://cdn.jsdelivr.net/gh/Dreamacro/maxmind-geoip@release/Country.mmdb  
 将MMDB到系统提示的目录下  
-`mv Country.mmdb /root/.config/clash/`  （注意不是自己创建的/root/clash)
+`mv Country.mmdb /root/.config/clash/`  
+（.config是一个隐藏文件夹，`ls -a`可以查看，里面的clash文件夹最开始没有，需要手动去创建或者先执行config.yaml提示缺失MMDB之后会自动创建一个)
 ### 4.设置全局代理
 设置全局代理需要在`/etc/profile`文件中设置  /etc/profile 是 Linux 系统的全局环境配置文件，它用于设置系统范围的环境变量。  
 当访问 HTTP/HTTPS 网址时，应该通过 127.0.0.1:7890（本机上的代理服务器）来转发流量  
