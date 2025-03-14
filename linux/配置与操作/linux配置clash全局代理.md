@@ -93,12 +93,12 @@ systemctl enable clash 设置开机自启clash服务
 systemctl daemon-reload 如果修改了clash.service文件，需要此命令来重载被修改的服务文件
 ```
 
-⭐⭐通常不用单独配置 Docker和container 即可直接拉取镜像 如果拉取不了可以单独配置一下
+⭐⭐通常不用单独配置 Docker和container 即可直接拉取镜像 如果拉取不了可以单独配置一下（查看K8S的容器运行时，再为对于运行时配置）
 ---------------------------------------------------------------
 **Docker 需要单独设置代理，因为 Docker 运行在自己的守护进程（daemon）中，它不会自动继承 /etc/profile 或 ~/.bashrc 里的环境变量  
 containerd 作为 Docker 的底层运行时，不会自动继承 /etc/profile 的代理设置。**  
 
-### 为 Docker 设置代理
+### 为 Docker 设置代理（Docker作为容器运行时）
 在 /etc/systemd/system/docker.service.d/ 目录下创建代理配置  
 `sudo mkdir -p /etc/systemd/system/docker.service.d`
 创建一个 http-proxy.conf 文件  
@@ -116,7 +116,7 @@ NO_PROXY 用于指定不走代理的地址，比如 localhost 和 127.0.0.1，�
 `sudo systemctl daemon-reload`
 `sudo systemctl restart docker`
 
-### 为containerd 设置代理
+### 为containerd 设置代理（Containerd作为容器运行时）
 创建 containerd 代理配置  
 `sudo mkdir -p /etc/systemd/system/containerd.service.d`
 创建一个 http-proxy.conf 文件   
