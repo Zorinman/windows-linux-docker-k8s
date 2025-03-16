@@ -33,8 +33,6 @@ LVM 是一种更高级的磁盘管理方式，它将物理磁盘（或分区）�
 
 ### 3 扩展文件系统  
 
-运行 fdisk  
-`fdisk /dev/sda  `  
 检查/dev/sda3 的文件系统类型   
 `blkid /dev/sda3`    
 ![img_26](https://github.com/user-attachments/assets/4adc6cd3-828c-4cc0-a427-49c3525cc8ba)
@@ -100,8 +98,6 @@ LVM 是一种更高级的磁盘管理方式，它将物理磁盘（或分区）�
 
 
 ###  4 扩展文件系统
-运行 fdisk  
-`fdisk /dev/sda  `  
 检查/dev/sda3 的文件系统类型   
 `blkid /dev/sda3`    
 ![img_26](https://github.com/user-attachments/assets/4c05e43f-ffe8-43c6-87d8-9d6e04f08843)
