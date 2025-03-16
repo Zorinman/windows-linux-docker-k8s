@@ -27,11 +27,11 @@ LVM 是一种更高级的磁盘管理方式，它将物理磁盘（或分区）�
 
 ### 2 使用growpart 工具扩展分区  
 如果没有则先安装  
-`sudo yum install cloud-utils-growpart`
+`sudo yum install cloud-utils-growpart`  
 扩展分区 /dev/sda 3  
 `sudo growpart /dev/sda 3`  
 
-### 3 扩展文件系统
+### 3 扩展文件系统  
 
 运行 fdisk  
 `fdisk /dev/sda  `  
@@ -68,7 +68,7 @@ LVM 是一种更高级的磁盘管理方式，它将物理磁盘（或分区）�
 
 ### 2 使用growpart 工具扩展分区  
 如果没有则先安装  
-`sudo yum install cloud-utils-growpart`
+`sudo yum install cloud-utils-growpart`  
 扩展分区 /dev/sda 3  
 `sudo growpart /dev/sda 3`  
 
@@ -88,7 +88,8 @@ LVM 是一种更高级的磁盘管理方式，它将物理磁盘（或分区）�
 
 `pvresize /dev/sda3`  
 
-**查看卷和卷组以及Free  PE / Size(剩余未使用的磁盘空间)**     
+**查看卷和卷组以及Free  PE / Size(剩余未使用的磁盘空间)**   
+`vgdisplay`  
 可以看到有10G未被使用
 ![img_20](https://github.com/user-attachments/assets/58b828c0-0fe6-47d9-819a-6e3c0ad0fa2e)
 
