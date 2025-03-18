@@ -1,3 +1,6 @@
+**ctrl+o**:将光标回退到上次所在的位置    
+**ctrl+➡**：快速移动光标（间隔跳动）  
+**end(fn+pg dn)**:将光标移动到当前行的末尾  
 ![image](https://github.com/user-attachments/assets/90d76688-2762-4091-8120-0c026f31faac)
 ![image](https://github.com/user-attachments/assets/cb184c2d-7d37-4f63-877e-030f8dfa6601)
 ![image](https://github.com/user-attachments/assets/2ddcfd7f-3ac9-49e3-b7fb-845392e520ec)
