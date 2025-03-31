@@ -37,12 +37,15 @@ https://cdn.jsdelivr.net/gh/Dreamacro/maxmind-geoip@release/Country.mmdb
 ### 4.设置全局代理
 设置全局代理需要在`/etc/profile`文件中设置  /etc/profile 是 Linux 系统的全局环境配置文件，它用于设置系统范围的环境变量。  
 当访问 HTTP/HTTPS 网址时，应该通过 127.0.0.1:7890（本机上的代理服务器）来转发流量  
-其中7890为clash的监听端口
+其中7890为clash的监听端口 
+clash代理是使用使用 HTTP 协议 配置的  
+![image](https://github.com/user-attachments/assets/ce917ef6-e548-4ac8-96fb-cae02faf5a2e)  
+因此在下面文件中添加代理配置，`http://127.0.0.1:7890`,表示无论是http还是https请求都会转到本地代理`127.0.0.1:7890`通过http协议来转发  
 ```
 $ vim /etc/profile
 ###在文件最后添加以下内容
-export http_proxy=127.0.0.1:7890
-export https_proxy=127.0.0.1:7890
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
 保存退出
 #使配置文件生效
 $ source /etc/profile
