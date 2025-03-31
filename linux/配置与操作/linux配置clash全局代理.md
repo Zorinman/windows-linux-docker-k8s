@@ -58,6 +58,7 @@ $ source /etc/profile
 实例：
 linux虚拟机上输入命令:`curl www.gooogle.com` ，此HTTPS流量通过HTTP协议发送给代理服务器，代理服务器通过HTTPS协议将HTTPS流量发送给目标google服务器，代理服务器收到返回的结果后再将结果通过HTTP协议返回给linux虚拟机。  
 
+--------
 客户端和代理服务器之间的通信：使用 HTTP 协议（因为配置的是 `http://127.0.0.1:7890`）。
 
 代理服务器和外部服务器之间的通信：使用 HTTPS 协议（因为请求流量目标是一个 HTTPS 网站，代理服务器会以 HTTPS 协议与外部服务器建立连接）。
