@@ -40,17 +40,7 @@ https://cdn.jsdelivr.net/gh/Dreamacro/maxmind-geoip@release/Country.mmdb
 127.0.0.1:7890为本地代理地址  7890为clash的监听端口
 ![image](https://github.com/user-attachments/assets/ce917ef6-e548-4ac8-96fb-cae02faf5a2e)  
 clash代理是使用使用 HTTP 协议配置的 因此 客户端(安装clash的linux虚拟机）和代理服务器（clash的订阅地址）使用的是HTTP协议通信  
-
-转发流程：客户端收到http或https协议的请求，通过http协议将请求流量发送到clash代理服务器，代理服务器通常会将此请求转发给目标服务器，并且与外部服务器的通信协议根据客户端收到的请求的协议决定，代理服务器接收结果后再次通过HTTP协议返回结果给客户端  
-
-实例：
-linux虚拟机上输入命令:`curl www.gooogle.com` ，此HTTPS流量通过HTTP协议发送给代理服务器，代理服务器通过HTTPS协议将HTTPS流量发送给目标google服务器，代理服务器收到返回的结果后再将结果通过HTTP协议返回给linux虚拟机。  
-
-客户端和代理服务器之间的通信：使用 HTTP 协议（因为配置的是 `http://127.0.0.1:7890`）。
-
-代理服务器和外部服务器之间的通信：使用 HTTPS 协议（因为请求流量目标是一个 HTTPS 网站，代理服务器会以 HTTPS 协议与外部服务器建立连接）。
-
-因此在下面文件中添加代理配置，`http://127.0.0.1:7890`,表示无论是http还是https请求都会通过HTTP协议将流量转到本地代理`127.0.0.1:7890`
+因此添加代理配置，`http://127.0.0.1:7890`
 
 
 ```
@@ -63,6 +53,16 @@ export https_proxy=http://127.0.0.1:7890
 $ source /etc/profile
 
 ```
+转发流程：客户端收到http或https协议的请求，通过http协议将请求流量发送到clash代理服务器，代理服务器通常会将此请求转发给目标服务器，并且与外部服务器的通信协议根据客户端收到的请求的协议决定，代理服务器接收结果后再次通过HTTP协议返回结果给客户端  
+
+实例：
+linux虚拟机上输入命令:`curl www.gooogle.com` ，此HTTPS流量通过HTTP协议发送给代理服务器，代理服务器通过HTTPS协议将HTTPS流量发送给目标google服务器，代理服务器收到返回的结果后再将结果通过HTTP协议返回给linux虚拟机。  
+
+客户端和代理服务器之间的通信：使用 HTTP 协议（因为配置的是 `http://127.0.0.1:7890`）。
+
+代理服务器和外部服务器之间的通信：使用 HTTPS 协议（因为请求流量目标是一个 HTTPS 网站，代理服务器会以 HTTPS 协议与外部服务器建立连接）。
+
+文件中添加代理配置，`http://127.0.0.1:7890`,表示无论是http还是https请求都会通过HTTP协议将流量转到本地代理`127.0.0.1:7890`
 
 ### 5.设置clash在后台运行  
 在config.yaml文件目录下临时直接运行`clash -f config.yaml`
