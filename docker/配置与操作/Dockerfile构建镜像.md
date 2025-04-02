@@ -49,8 +49,12 @@ USER jenkins
 
 ```
 构建镜像 ,（[这里以harbor仓库的格式构建后续需要可以推送到harbor](https://github.com/Zorinman/K8S/blob/main/%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3/habor%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93.md)）
-`docker build -t 192.168.219.129/library/jenkins-maven:v1 .`
+`docker build -t 192.168.219.129:80/library/jenkins-maven:v1 .`
 
 
 构建完成即可查看新生成的镜像
 `docker images`
+
+推送到harbor 则在主机上配置好之后  
+`docker login 192.168.219.129:80 `
+`docker push 192.168.219.129:80/library/jenkins-maven:v1`
