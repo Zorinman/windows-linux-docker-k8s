@@ -56,5 +56,5 @@ USER jenkins
 `docker images`
 
 推送到harbor 则在主机上配置好之后  
-`docker login 192.168.219.129:80 `
-`docker push 192.168.219.129:80/library/jenkins-maven:v1`
+`docker login 192.168.219.129:80 `  
+`docker push 192.168.219.129:80/library/jenkins-maven:v1`  
