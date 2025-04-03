@@ -7,7 +7,7 @@ wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bi
 wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.8.0.2856-linux.zip
 
 
-### 2. vim创建Dockerfile文件添加以下内容
+### 2. vim创建Dockerfile文件添加以下内容（去掉注释)
 ```dockerfile
 #FROM：指定了构建镜像时的基础镜像。在这里，使用的是 jenkins/jenkins:2.392-jdk11
 FROM jenkins/jenkins:2.392-jdk11
