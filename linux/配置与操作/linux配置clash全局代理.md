@@ -26,6 +26,7 @@ config.yaml为clash的代理规则和clash的一些其他设置。代理规则�
 
 将下载下来的yaml文件改名为config.yaml放入linux中 
 `mv xxxxx config.yaml`
+
 在config.yaml的目录下运行该文件   
 `clash -f config.yaml`  
 此时会提示[MMDB] can't find DB, start download path=/root/.config/clash/Country.mmdb  
