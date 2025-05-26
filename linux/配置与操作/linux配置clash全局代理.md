@@ -24,8 +24,8 @@ config.yaml为clash的代理规则和clash的一些其他设置。代理规则�
 ![image](https://github.com/user-attachments/assets/ee419d71-9953-4b68-af0d-55b7e79a349a)
 ![image](https://github.com/user-attachments/assets/9d60a4a9-f0a7-4af9-b279-1f70a5203d19)
 
-将下载下来的yaml文件改名为config.yaml放入linux中 
-`mv xxxxx config.yaml`
+将下载下来的yaml文件改名为config.yaml放入linux中   
+`mv xxxxx config.yaml`  
 
 在config.yaml的目录下运行该文件   
 `clash -f config.yaml`  
