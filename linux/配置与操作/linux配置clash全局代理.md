@@ -18,11 +18,14 @@ https://github.com/zhongfly/Clash-premium-backup/releases/download/2023-09-05-gd
 `clash -v`
 ### 2.创建config.yaml文件
 config.yaml为clash的代理规则和clash的一些其他设置。代理规则不需要我们自己编写，通过订阅地址直接下载即可  
-在自己的calsh里根据订阅地址直接浏览器打开下载yaml文件  
+- 1.在自己的calsh里根据订阅地址直接浏览器打开下载yaml文件  
+- 2.直接在linux 使用wget+上图的订阅地址下载
+- 
 ![image](https://github.com/user-attachments/assets/ee419d71-9953-4b68-af0d-55b7e79a349a)
 ![image](https://github.com/user-attachments/assets/9d60a4a9-f0a7-4af9-b279-1f70a5203d19)
 
 将下载下来的yaml文件改名为config.yaml放入linux中 
+`mv xxxxx config.yaml`
 在config.yaml的目录下运行该文件   
 `clash -f config.yaml`  
 此时会提示[MMDB] can't find DB, start download path=/root/.config/clash/Country.mmdb  
