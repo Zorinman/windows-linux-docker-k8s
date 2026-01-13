@@ -73,7 +73,7 @@ linux虚拟机上输入命令:`curl www.gooogle.com` ，此HTTPS流量通过HTTP
 在config.yaml文件目录下临时直接运行`clash -f config.yaml`
 临时运行clash的话，一旦ctrl+c关闭了终端，那么clash也会一并关闭。所以我们需要设置一下后台运行clash  
 在/etc/systemd/system/目录新建一个clash.service文件  
-⭐ 注意`ExecStart=/usr/local/bin/clash -d /root/clash` 中的/root/clash是你移动进来的config.yaml文件的所在位置，请以你实际放置的位置为准.  
+⭐ 注意`ExecStart=/usr/local/bin/clash -d /root/clash` 中的/root/clash是你移动进来的config.yaml文件的所在位置，请以你实际放置的位置为准.  也可以统一放到/root/clash
 ```
 $ vim /etc/systemd/system/clash.service
 #添加以下内容（记得把#之后的注释全部删除）：
@@ -152,4 +152,5 @@ Environment="NO_PROXY=localhost,127.0.0.1"
 重新加载配置并重启 containerd  
 `sudo systemctl daemon-reload`
 `sudo systemctl restart containerd`
+
 
