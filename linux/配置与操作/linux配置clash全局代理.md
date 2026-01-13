@@ -36,7 +36,7 @@ config.yaml为clash的代理规则和clash的一些其他设置。代理规则�
 Country.mmdb为全球IP库，可以实现各个国家的IP信息解析和地理定位，没有这个文件clash是无法运行的  
 https://cdn.jsdelivr.net/gh/Dreamacro/maxmind-geoip@release/Country.mmdb  
 将MMDB到系统提示的目录下  
-`mv Country.mmdb /root/.config/clash/`  
+`mv Country.mmdb /root/.config/clash/`   ⭐注意这里移动得目标位置请以之前`can't find DB, start download path=`的提示为准  
 （.config是一个隐藏文件夹，`ls -a`可以查看，里面的clash文件夹最开始没有，需要手动去创建或者先执行config.yaml提示缺失MMDB之后会自动创建一个)
 ### 4.设置全局代理
 设置全局代理需要在`/etc/profile`文件中设置  /etc/profile 是 Linux 系统的全局环境配置文件，它用于设置系统范围的环境变量。  
@@ -73,6 +73,7 @@ linux虚拟机上输入命令:`curl www.gooogle.com` ，此HTTPS流量通过HTTP
 在config.yaml文件目录下临时直接运行`clash -f config.yaml`
 临时运行clash的话，一旦ctrl+c关闭了终端，那么clash也会一并关闭。所以我们需要设置一下后台运行clash  
 在/etc/systemd/system/目录新建一个clash.service文件  
+⭐ 注意`ExecStart=/usr/local/bin/clash -d /root/clash` 中的/root/clash是你移动进来的config.yaml文件的所在位置，请以你实际放置的位置为准.  
 ```
 $ vim /etc/systemd/system/clash.service
 #添加以下内容（记得把#之后的注释全部删除）：
@@ -83,7 +84,7 @@ After=network.target
 [Service]
 Type=simple
 User=root   #你的用户名，默认为root 可通过命令whoami查看
-ExecStart=/usr/local/bin/clash -d /root/clash #/usr/local/bin/clashclash执行文件的绝对路径  /root/clash是config.yaml配置文件的目录 
+ExecStart=/usr/local/bin/clash -d /root/clash #/usr/local/bin/clashclash执行文件的绝对路径  /root/clash是config.yaml配置文件的所在目录 
 Restart=on-failure
 RestartPreventExitStatus=23
 
@@ -151,3 +152,4 @@ Environment="NO_PROXY=localhost,127.0.0.1"
 重新加载配置并重启 containerd  
 `sudo systemctl daemon-reload`
 `sudo systemctl restart containerd`
+
