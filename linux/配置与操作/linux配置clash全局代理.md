@@ -149,8 +149,11 @@ Environment="HTTP_PROXY=http://127.0.0.1:7890"
 Environment="HTTPS_PROXY=http://127.0.0.1:7890"
 Environment="NO_PROXY=localhost,127.0.0.1"
 ```
+⭐**注意这里只是添加了clash的配置，但是为了让 Containerd 拉取外部镜像（走代理），又不影响集群内部通信（直连）。我们需要根据之前 kubeadm init的参数实际修正，加入加入了你的k8s内部物理网段、Service网段、Pod网段和集群后缀** 详细请参考k8s参考的部署文档:`安装Debian 13.3并 部署k8s v1.34`
+
 重新加载配置并重启 containerd  
 `sudo systemctl daemon-reload`
 `sudo systemctl restart containerd`
+
 
 
