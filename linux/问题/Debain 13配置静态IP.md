@@ -1,5 +1,5 @@
 
-⭐ **address，netmask，gateway的查看和之前一样不再赘述** 
+⭐ **address，netmask，gateway从虚拟机网络编辑器里获取不再赘述**  [参考Ubuntu和Centos的](Ubuntun和Centos固定虚拟机IP地址保持不变以及解决PING不通的问题_虚拟机固定ip永远ping不通域名-CSDN博客.pdf)
 
 # 1.确认你的网卡名称（通常是 ens33, eth0 等）：
 ```bash
