@@ -9,7 +9,7 @@ ip addr
 ```bash
 sudo vim /etc/network/interfaces
 ```
-<img width="634" height="293" alt="image-5" src="https://github.com/user-attachments/assets/718df391-49e5-4d77-acc3-665bc75f9f58" />![Uploading image-5.png…]()
+<img width="634" height="293" alt="image-5" src="https://github.com/user-attachments/assets/718df391-49e5-4d77-acc3-665bc75f9f58" />
 
 
 **添加内容如下**
