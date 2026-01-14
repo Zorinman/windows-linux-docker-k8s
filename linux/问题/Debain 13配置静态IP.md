@@ -9,7 +9,8 @@ ip addr
 ```bash
 sudo vim /etc/network/interfaces
 ```
-![alt text](imgs/image-5.png)
+![Uploading image-5.png…]()
+
 **添加内容如下**
 dns-nameservers和gateway相同即可
 ```
