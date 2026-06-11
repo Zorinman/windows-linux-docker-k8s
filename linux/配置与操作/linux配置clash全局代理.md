@@ -1,4 +1,7 @@
 ### 需要自己有订阅的clash
+
+⭐使用时要保证clash verge关闭，clash老版本打开。
+更新新的config.yaml文件后，只需要移动到把新配置文件与移动到/root/clash
 ### 配置clash全局代理之后 docker和k8s可以直接拉取镜像 非常方便（k8s需要每个节点都配置）  
 参考文章  
 https://www.fuxi.info/archives/273  
